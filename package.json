@@ -1,0 +1,53 @@
+{
+  "name": "dsh-plugin-seo",
+  "version": "0.1.0",
+  "description": "SEO 体检 for DeepSeek Harness — 说一句「SEO 体检」并给网址，DSH 按 Google Search Central 官方页逐条判六个维度，一页报告每条带证据和官方页地址，你点头它才改工作区里的站文件，部署是你做；不批量产页、不做外链、不抓 Google 结果页、不承诺排名。SEO checkup for DeepSeek Harness: say “SEO 体检” with a URL and DSH judges six dimensions against Google Search Central's own pages, writes a one-page report with evidence and the official page for every finding, edits site files in the workspace only after you approve each fix, and leaves deploying to you; no bulk pages, no link building, no scraping Google results, no ranking promises.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/*.js",
+    "skills/**",
+    "books/**",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "ilang",
+    "i-lang",
+    "seo",
+    "SEO体检",
+    "google-search-central"
+  ],
+  "license": "MIT",
+  "author": "adsorgcn",
+  "homepage": "https://dsh.ilang.guide/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adsorgcn/dsh-plugin-seo.git"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.5 <0.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/plugin.test.mjs"
+  }
+}

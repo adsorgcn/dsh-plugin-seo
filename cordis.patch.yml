@@ -1,0 +1,5 @@
+# SEO 体检：注册一个 skill「seo-tijian」和一个取书工具「seo_book」。书随包带着，没有配置项，没有网络请求。
+- insert:
+    - id: dsh-plugin-seo
+      name: 'dsh-plugin-seo'
+      config: {}
